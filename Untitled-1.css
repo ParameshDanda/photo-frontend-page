@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    background: url("photo\ \(2\).jpg"); /* Adjust the path as needed */
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+}
+
+.sidebar_menu {
+    position: fixed; /* Use fixed to keep the sidebar in place */
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    left: -300px; /* Initially hidden */
+    transition: left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar_menu .logo {
+    position: absolute;
+    width: 100px;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500; /* Corrected from 'font: weight' */
+}
+
+.btn_two {
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;
+}
+
+.sidebar_menu .menu {
+    margin-top: 80px; /* Adjust to give space below the logo */
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 14px 20px;   
+}
+
+.sidebar_menu i, .sidebar_menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media {
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+    left: 20px;
+    bottom: 20px; /* Position social media links at the bottom */
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0.5px;
+}
+
+#check {
+    display: none;  
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); 
+}
+
+.btn_one:hover {
+    font-size: 40px;
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0; /* Show the sidebar when checked */
+}
+
+#check:checked ~ .btn_one i {
+    opacity: 0; /* Hide the menu icon when sidebar is open */
+}
